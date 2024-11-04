@@ -1,0 +1,135 @@
+.principal{
+    height: 80%;
+    background-image: url('../img/fondoceleste.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footernuevo{
+    height: 12%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.izq{
+    background-image: url('../img/scaloni.png');
+    background-size: contain;
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding-left: 250px;
+    padding-top: 20px;
+    padding-bottom: 150px;
+    min-height: 300px;
+}
+.der{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    color: white; 
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.social-icons a:hover {
+    color: #1da1f2; 
+}
+.grid-copas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 1px;
+    padding-top: 30px;
+}
+
+.grid-copas img {
+    width: 65%;
+    height: auto;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.grid-copas a {
+    display: block;
+}
+
+.grid-copas img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 10px;
+    background-color: #444;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+nav ul li a:hover {
+    background-color: blue;
+}
+.izq2019{
+    background-image: url('../img/copa2019.png');
+    background-size: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 150px;
+    padding-top: 20px;
+    padding-bottom: 150px;
+    min-height: 300px;
+}
+.izq2021{
+    background-image: url('../img/copa2021.png');
+    background-size: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 150px;
+    padding-top: 20px;
+    padding-bottom: 150px;
+    min-height: 300px;
+}.izq2022{
+    background-image: url('../img/copa2022.png');
+    background-size: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 150px;
+    padding-top: 20px;
+    padding-bottom: 150px;
+    min-height: 300px;
+}.izq2024{
+    background-image: url('../img/copa2024.png');
+    background-size: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 150px;
+    padding-top: 20px;
+    padding-bottom: 150px;
+    min-height: 300px;
+}
