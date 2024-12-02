@@ -2,21 +2,21 @@ nav {
     width: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Asegura que el padding del nav no interfiera con el ancho */
-    background-color: #333; /* Color de fondo para verificar bordes */
+    box-sizing: border-box;
+    background-color: #333;
 }
 
 nav ul {
     display: flex;
-    justify-content: space-between; /* Distribuye los elementos a lo largo del nav */
-    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between;
+    align-items: center;
     padding: 0;
     margin: 0;
-    list-style-type: none; /* Elimina los estilos de lista por defecto */
+    list-style-type: none;
 }
 
 nav ul li {
-    margin: 0 5px; /* Espaciado entre los elementos */
+    margin: 0 5px;
 }
 
 nav ul li a {
@@ -39,7 +39,7 @@ html, body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box; /* Garantiza que el padding no afecte al ancho */
+    box-sizing: border-box;
 }
 
 body {

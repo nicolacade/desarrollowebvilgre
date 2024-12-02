@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .footernuevo {
   height: auto;
   background-color: #333;
@@ -69,32 +70,61 @@
   min-height: 300px;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 10px 10px;
-  background-color: #444;
-  border-radius: 50px;
-  white-space: nowrap;
+nav {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Asegura que el padding del nav no interfiera con el ancho */
+  background-color: #333; /* Color de fondo para verificar bordes */
 }
 
 nav ul {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: space-between; /* Distribuye los elementos a lo largo del nav */
+  align-items: center; /* Alinea verticalmente */
+  padding: 0;
+  margin: 0;
+  list-style-type: none; /* Elimina los estilos de lista por defecto */
+}
+
+nav ul li {
+  margin: 0 5px; /* Espaciado entre los elementos */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #444;
+  border-radius: 50px;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
   background-color: blue;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* Garantiza que el padding no afecte al ancho */
+}
+
+body {
+  width: 100%;
+}
+
 .principal {
-  height: 80%;
+  flex: 1;
   background-image: url("../img/fondoceleste.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  flex: 1;
 }
 
 .izq {
@@ -141,13 +171,6 @@ nav ul li a:hover {
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
 iframe {
   border: 5px solid transparent;
   border-radius: 15px;
@@ -165,6 +188,77 @@ iframe {
   max-width: 100%;
   width: 560px;
   height: 315px;
+}
+
+@media screen and (max-width: 768px) {
+  article {
+    width: 100%; /* Asegura que el artículo ocupe todo el ancho disponible */
+    height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    display: flex; /* Usamos flexbox para distribuir el contenido */
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    justify-content: flex-start; /* Empuja el contenido hacia la parte superior */
+    align-items: center; /* Centra los elementos en el eje horizontal */
+    padding: 0; /* Elimina el padding innecesario */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en las dimensiones del artículo */
+    overflow: hidden; /* Evita que los elementos sobresalgan del artículo */
+  }
+  .principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio entre la imagen de Scaloni y la grilla de copas */
+    align-items: center;
+    flex: 1;
+    background-image: url("../img/fondoceleste.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 20px; /* Ajusta el espacio en los lados */
+    box-sizing: border-box;
+  }
+  .izq {
+    background-image: url("../img/scaloni.png");
+    background-size: cover; /* Cambié a 'cover' para que ocupe todo el espacio disponible */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    flex: 1; /* Asegura que ocupe el espacio disponible */
+    width: 100%; /* Asegura que no se recorte */
+    height: 50vh; /* Usa el 50% de la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .der {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  }
+  .grid-copas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    padding: 20px;
+    width: 100%; /* Asegura que ocupe el 100% del ancho */
+    height: 50vh; /* Usa el 50% de la altura de la pantalla */
+    box-sizing: border-box;
+  }
+  .grid-copas img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Asegura que las imágenes no se corten */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .grid-copas img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5);
+  }
+  .grid-copas a {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
